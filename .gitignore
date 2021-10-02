@@ -1,0 +1,8 @@
+# Tooling
+.bloop
+.bsp
+.idea
+.metals
+
+# Build
+target/
