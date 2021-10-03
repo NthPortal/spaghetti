@@ -196,45 +196,6 @@ jobs:
       - name: MiMa
         run: sbt ++${{ matrix.scala }} clean mimaReportBinaryIssues
 
-  coverage:
-    name: Coverage
-    needs: [test]
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest]
-        scala: [3.0.2]
-        java: [adopt@1.8]
-    runs-on: ${{ matrix.os }}
-    env:
-      COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-    steps:
-      - name: Checkout current branch (full)
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - name: Setup Java and Scala
-        uses: olafurpg/setup-scala@v13
-        with:
-          java-version: ${{ matrix.java }}
-
-      - name: Cache sbt
-        uses: actions/cache@v2
-        with:
-          path: |
-            ~/.sbt
-            ~/.ivy2/cache
-            ~/.coursier/cache/v1
-            ~/.cache/coursier/v1
-            ~/AppData/Local/Coursier/Cache/v1
-            ~/Library/Caches/Coursier/v1
-          key: ${{ runner.os }}-sbt-cache-v2-${{ hashFiles('**/*.sbt') }}-${{ hashFiles('project/build.properties') }}
-
-      - name: Coveralls
-        if: env.COVERALLS_REPO_TOKEN != ''
-        run: sbt ++${{ matrix.scala }} coverage test coverageAggregate coveralls
-
   formatting:
     name: Formatting
     needs: [build]

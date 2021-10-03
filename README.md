@@ -1,10 +1,11 @@
 # spaghetti
 
 ![Build Status](https://img.shields.io/github/workflow/status/NthPortal/spaghetti/Continuous%20Integration?logo=github&style=for-the-badge)
-[![Coverage Status](https://img.shields.io/coveralls/github/NthPortal/spaghetti/main?logo=coveralls&style=for-the-badge)](https://coveralls.io/github/NthPortal/spaghetti?branch=main)
 [![Maven Central](https://img.shields.io/maven-central/v/lgbt.princess/spaghetti_3?logo=apache-maven&style=for-the-badge)](https://mvnrepository.com/artifact/lgbt.princess/spaghetti)
 [![Versioning](https://img.shields.io/badge/versioning-semver%202.0.0-blue.svg?style=for-the-badge)](http://semver.org/spec/v2.0.0.html)
 [![Docs](https://www.javadoc.io/badge2/lgbt.princess/spaghetti_3/docs.svg?color=blue&style=for-the-badge)](https://www.javadoc.io/doc/lgbt.princess/spaghetti_3)
+
+[comment]: <> ([![Coverage Status]&#40;https://img.shields.io/coveralls/github/NthPortal/spaghetti/main?logo=coveralls&style=for-the-badge&#41;]&#40;https://coveralls.io/github/NthPortal/spaghetti?branch=main&#41;)
 
 A Scala 3 implementation of goto.
 
