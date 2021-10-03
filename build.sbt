@@ -66,22 +66,22 @@ inThisBuild(
         needs = List("build"),
         matrixFailFast = Some(false),
       ),
-      WorkflowJob(
-        "coverage",
-        "Coverage",
-        githubWorkflowJobSetup.value.toList ::: List(
-          WorkflowStep.Sbt(
-            List("coverage", "test", "coverageAggregate", "coveralls"),
-            name = Some("Coveralls"),
-            cond = Some("env.COVERALLS_REPO_TOKEN != ''"),
-          )
-        ),
-        env = Map("COVERALLS_REPO_TOKEN" -> "${{ secrets.COVERALLS_REPO_TOKEN }}"),
-        javas = List(PrimaryJava),
-        scalas = crossScalaVersions.value.toList,
-        needs = List("test"),
-        matrixFailFast = Some(false),
-      ),
+//      WorkflowJob(
+//        "coverage",
+//        "Coverage",
+//        githubWorkflowJobSetup.value.toList ::: List(
+//          WorkflowStep.Sbt(
+//            List("coverage", "test", "coverageAggregate", "coveralls"),
+//            name = Some("Coveralls"),
+//            cond = Some("env.COVERALLS_REPO_TOKEN != ''"),
+//          )
+//        ),
+//        env = Map("COVERALLS_REPO_TOKEN" -> "${{ secrets.COVERALLS_REPO_TOKEN }}"),
+//        javas = List(PrimaryJava),
+//        scalas = crossScalaVersions.value.toList,
+//        needs = List("test"),
+//        matrixFailFast = Some(false),
+//      ),
       WorkflowJob(
         "formatting",
         "Formatting",
