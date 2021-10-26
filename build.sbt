@@ -123,9 +123,9 @@ inThisBuild(
 lazy val root = project
   .in(file("."))
   .settings(
-    name                                 := "spaghetti",
-    mimaPreviousArtifacts                := Set().map(organization.value %% name.value % _),
-    libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test",
+    name                                   := "spaghetti",
+    mimaPreviousArtifacts                  := Set().map(organization.value %% name.value % _),
+    libraryDependencies += "com.github.sbt" % "junit-interface" % "0.13.2" % "test",
     scalacOptions ++= Seq(
       "-deprecation",
       "-feature",
