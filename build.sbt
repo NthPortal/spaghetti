@@ -125,7 +125,7 @@ lazy val root = project
   .settings(
     name                                   := "spaghetti",
     mimaPreviousArtifacts                  := Set().map(organization.value %% name.value % _),
-    libraryDependencies += "com.github.sbt" % "junit-interface" % "0.13.2" % "test",
+    libraryDependencies += "com.github.sbt" % "junit-interface" % "0.13.3" % "test",
     scalacOptions ++= Seq(
       "-deprecation",
       "-feature",
