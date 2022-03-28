@@ -20,5 +20,5 @@ bad way to program in general.
 **Scala 3**
 
 ```sbtshell
-libraryDependencies += "lgbt.princess" %% "spaghetti" % "0.1.0"
+libraryDependencies += "lgbt.princess" %% "spaghetti" % "0.1.0" % Test
 ```
