@@ -125,7 +125,7 @@ class SpaghettiTest {
     unitSpaghetti {
       // aaaaaaaaaaaa
       for (i <- 1 to 10)
-        do label(s"$i") { sum += i }
+      do label(s"$i") { sum += i }
     }
     assertEquals(55, sum)
 
@@ -138,7 +138,7 @@ class SpaghettiTest {
       }
       // aaaaaaaaaaaa
       for (i <- 1 to 10)
-        do label(s"$i") { sum += i }
+      do label(s"$i") { sum += i }
     }
     assertEquals(40, sum)
 
@@ -158,11 +158,11 @@ class SpaghettiTest {
           goto(s"${count % 8}")
         }
         for (i <- 8 to 1 by -1)
-          do
-            label(s"${i % 8}") {
-              to := from(idx)
-              idx += 1
-            }
+        do
+          label(s"${i % 8}") {
+            to := from(idx)
+            idx += 1
+          }
         label("end") {
           n -= 1
           if n > 0 then goto("0")
